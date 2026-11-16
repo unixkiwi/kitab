@@ -1,0 +1,37 @@
+package de.unixkiwi.kitab.ui.navigation
+
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.navigation3.runtime.NavBackStack
+import androidx.navigation3.runtime.NavEntry
+import androidx.navigation3.runtime.NavKey
+import androidx.navigation3.ui.NavDisplay
+import de.unixkiwi.kitab.ui.editor.EditorScreen
+import de.unixkiwi.kitab.ui.library.LibraryScreen
+
+@Composable
+fun KitabNavDisplay(
+    backStack: NavBackStack<NavKey>,
+    modifier: Modifier = Modifier
+) {
+    NavDisplay(
+        backStack = backStack,
+        onBack = { backStack.removeLastOrNull() },
+        entryProvider = { key ->
+            when (key) {
+                is Library -> NavEntry(key) {
+                    LibraryScreen(listOf("Note 1" to "note-1", "Note 2" to "note-2"), onBtnClick = {
+                        backStack.add(Editor(it))
+                    })
+                }
+
+                is Editor -> NavEntry(key) {
+                    EditorScreen("Note with ID: ${key.noteId}")
+                }
+
+                else -> NavEntry(key) { Text("Unknown route") }
+            }
+        }
+    )
+}
