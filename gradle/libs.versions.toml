@@ -13,10 +13,9 @@ lifecycleViewmodelNav3 = "2.12.0-alpha05"
 kotlinSerialization = "2.4.21"
 kotlinxSerializationCore = "1.13.0"
 material3AdaptiveNav3 = "1.4.0-alpha03"
-hilt = "2.60.1"
-hiltNavigationCompose = "1.4.0"
 ksp = "2.3.12"
 inkApi = "1.1.0-alpha11"
+koin = "4.2.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,9 +37,6 @@ androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", vers
 androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodelNav3" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
 androidx-material3-adaptive-navigation3 = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "material3AdaptiveNav3" }
-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
-androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-ink-nativeloader = { group = "androidx.ink", name = "ink-nativeloader", version.ref = "inkApi" }
 androidx-ink-rendering = { group = "androidx.ink", name = "ink-rendering", version.ref = "inkApi" }
 androidx-ink-strokes = { group = "androidx.ink", name = "ink-strokes", version.ref = "inkApi" }
@@ -49,10 +45,15 @@ androidx-ink-brush-compose = { group = "androidx.ink", name = "ink-brush-compose
 androidx-ink-geometry-compose = { group = "androidx.ink", name = "ink-geometry-compose", version.ref = "inkApi" }
 androidx-ink-storage = { group = "androidx.ink", name = "ink-storage", version.ref = "inkApi" }
 
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-compose = { module = "io.insert-koin:koin-compose" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinSerialization" }
 

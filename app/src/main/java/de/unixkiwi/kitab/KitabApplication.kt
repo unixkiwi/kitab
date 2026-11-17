@@ -1,7 +1,16 @@
 package de.unixkiwi.kitab
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import de.unixkiwi.kitab.di.appModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
-@HiltAndroidApp
-class KitabApplication : Application()
+class KitabApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        startKoin {
+            androidContext(this@KitabApplication)
+            modules(appModule)
+        }
+    }
+}
