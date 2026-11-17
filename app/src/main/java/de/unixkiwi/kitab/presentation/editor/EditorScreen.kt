@@ -12,10 +12,9 @@ import androidx.compose.ui.text.font.FontWeight
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EditorScreen(
-    text: String,
+    noteId: String,
     modifier: Modifier = Modifier
 ) {
-
     Scaffold(
         topBar = {
             TopAppBar(
@@ -24,7 +23,7 @@ fun EditorScreen(
         },
         modifier = modifier
     ) { innerPadding ->
-        Text(text, modifier.padding(innerPadding))
+        Text("text", modifier.padding(innerPadding))
     }
 }
 

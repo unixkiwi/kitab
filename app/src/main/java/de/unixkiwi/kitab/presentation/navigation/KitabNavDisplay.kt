@@ -27,7 +27,7 @@ fun KitabNavDisplay(
                 }
 
                 is Editor -> NavEntry(key) {
-                    EditorScreen("Note with ID: ${key.noteId}")
+                    EditorScreen(key.noteId)
                 }
 
                 else -> NavEntry(key) { Text("Unknown route") }
