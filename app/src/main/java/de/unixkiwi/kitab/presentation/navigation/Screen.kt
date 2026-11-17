@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.navigation
+package de.unixkiwi.kitab.presentation.navigation
 
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable

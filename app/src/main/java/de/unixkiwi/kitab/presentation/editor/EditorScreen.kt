@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.editor
+package de.unixkiwi.kitab.presentation.editor
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api

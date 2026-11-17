@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.theme
+package de.unixkiwi.kitab.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

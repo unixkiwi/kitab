@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.navigation
+package de.unixkiwi.kitab.presentation.navigation
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -7,8 +7,8 @@ import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.runtime.NavKey
 import androidx.navigation3.ui.NavDisplay
-import de.unixkiwi.kitab.ui.editor.EditorScreen
-import de.unixkiwi.kitab.ui.library.LibraryScreen
+import de.unixkiwi.kitab.presentation.editor.EditorScreen
+import de.unixkiwi.kitab.presentation.library.LibraryScreen
 
 @Composable
 fun KitabNavDisplay(

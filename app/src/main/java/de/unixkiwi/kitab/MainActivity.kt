@@ -10,9 +10,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.rememberNavBackStack
 import dagger.hilt.android.AndroidEntryPoint
-import de.unixkiwi.kitab.ui.navigation.KitabNavDisplay
-import de.unixkiwi.kitab.ui.navigation.Library
-import de.unixkiwi.kitab.ui.theme.KitabTheme
+import de.unixkiwi.kitab.presentation.navigation.KitabNavDisplay
+import de.unixkiwi.kitab.presentation.navigation.Library
+import de.unixkiwi.kitab.presentation.theme.KitabTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

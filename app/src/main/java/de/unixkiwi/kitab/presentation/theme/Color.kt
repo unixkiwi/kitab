@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.theme
+package de.unixkiwi.kitab.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

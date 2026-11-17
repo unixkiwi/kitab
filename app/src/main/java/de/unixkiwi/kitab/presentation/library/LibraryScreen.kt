@@ -1,4 +1,4 @@
-package de.unixkiwi.kitab.ui.library
+package de.unixkiwi.kitab.presentation.library
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -21,7 +21,7 @@ fun LibraryScreen(
             modifier.padding(innerPadding)
         ) {
             for (note in notes) {
-                Button (
+                Button(
                     onClick = { onBtnClick(note.second) }
                 ) {
                     Text(note.first)
