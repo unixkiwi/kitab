@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.material3.adaptive.navigation3)
     implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.serialization.core)
+    implementation(libs.kotlinx.serialization.json)
 
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
