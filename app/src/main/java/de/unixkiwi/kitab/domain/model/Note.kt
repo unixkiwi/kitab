@@ -14,7 +14,10 @@ data class Note(
     val pages: List<NotePage> = emptyList()
 ) {
     companion object {
-        fun create(title: String = "Untitled note"): Note {
+        fun create(
+            title: String = "Untitled note",
+            pages: List<NotePage> = listOf(NotePage(id = UUID.randomUUID().toString()))
+        ): Note {
             val now = System.currentTimeMillis()
 
             return Note(
@@ -22,9 +25,7 @@ data class Note(
                 title = title,
                 createdAtMillis = now,
                 modifiedAtMillis = now,
-                pages = listOf(
-                    NotePage(id = UUID.randomUUID().toString())
-                )
+                pages = pages
             )
         }
     }
